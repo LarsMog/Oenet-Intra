@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <fieldset>
+    <field name="id" type="text" readonly="true" class="readonly" default="0" description="JGLOBAL_FIELD_ID_DESC"/>
+    <field name="ordering"/>
+    <field name="state" default="1" type="list" label="JSTATUS" description="JFIELD_PUBLISHED_DESC" class="inputbox" size="1">
+      <option value="1">JPUBLISHED</option>
+      <option value="0">JUNPUBLISHED</option>
+      <option value="2">JARCHIVED</option>
+      <option value="-2">JTRASHED</option>
+    </field>
+    <field name="checked_out" type="hidden" filter="unset"/>
+    <field name="checked_out_time" default="0000-00-00 00:00:00" type="hidden" filter="unset"/>
+    <field name="name" type="text" class="form-control" required="true" label="COM_INTRA_FORM_LBL_EVENT_NAME" description="COM_INTRA_FORM_DESC_EVENT_NAME" hint="COM_INTRA_FORM_LBL_EVENT_NAME"/>
+    <field name="date" type="calendar" class="form-control" required="true" label="COM_INTRA_FORM_LBL_EVENT_DATE" description="COM_INTRA_FORM_DESC_EVENT_DATE" hint="COM_INTRA_FORM_LBL_EVENT_DATE"/>
+    <field name="time_start" type="text"  class="form-control" filter="safehtml" required="true" label="COM_INTRA_FORM_LBL_EVENT_TIME_START" description="COM_INTRA_FORM_DESC_EVENT_TIME_START" hint="COM_INTRA_FORM_LBL_EVENT_TIME_START"/>
+    <field name="time_end" type="text"  class="form-control" filter="safehtml" label="COM_INTRA_FORM_LBL_EVENT_TIME_END" description="COM_INTRA_FORM_DESC_EVENT_TIME_END" hint="COM_INTRA_FORM_LBL_EVENT_TIME_END"/>
+    <field name="place" type="text"  class="form-control" label="COM_INTRA_FORM_LBL_EVENT_PLACE" description="COM_INTRA_FORM_DESC_EVENT_PLACE" hint="COM_INTRA_FORM_LBL_EVENT_PLACE"/>
+    <field name="description" type="editor" rows="5" class="form-control" filter="safehtml" label="COM_INTRA_FORM_LBL_EVENT_DESCRIPTION" description="COM_INTRA_FORM_DESC_EVENT_DESCRIPTION" hint="COM_INTRA_FORM_LBL_EVENT_DESCRIPTION"/>
+    <field name="file" type="FileMultiple"  class="form-control" label="COM_INTRA_FORM_LBL_EVENT_FILE" description="COM_INTRA_FORM_DESC_EVENT_FILE" hint="COM_INTRA_FORM_LBL_EVENT_FILE"/>
+    <field name="participants" type="sql"  class="form-control" label="COM_INTRA_FORM_LBL_EVENT_PARTICIPANTS" description="COM_INTRA_FORM_DESC_EVENT_PARTICIPANTS" hint="COM_INTRA_FORM_LBL_EVENT_PARTICIPANTS"
+      query="SELECT id,name FROM #__users ORDER BY name" key_field="id" value_field="name" multiple="1"
+    />
+    <field name="version_note" type="text" label="JGLOBAL_FIELD_VERSION_NOTE_LABEL" description="JGLOBAL_FIELD_VERSION_NOTE_DESC" class="inputbox" size="45" labelclass="control-label"/>
+  </fieldset>
+</form>

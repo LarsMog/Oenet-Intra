@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0" method="upgrade">
+    <name>com_intra</name>
+    <creationDate>2017-02-01</creationDate>
+    <copyright>2017 Webitall Aps</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <author>Webitall Aps</author>
+    <authorEmail>home@webitall.dk</authorEmail>
+    <authorUrl>http://webitall.dk</authorUrl>
+    <version>CVS: 1.0.0</version>
+    <description></description>
+    
+    <scriptfile>script.php</scriptfile>
+    
+    <install> <!-- Runs on install -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+        </sql>
+    </install>
+    <update> <!-- Runs on update -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/update.mysql.utf8.sql</file>
+        </sql>
+    </update>
+    <uninstall> <!-- Runs on uninstall -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+        </sql>
+    </uninstall>
+
+    <files folder="site">
+        <filename>index.html</filename>
+        <filename>intra.php</filename>
+        <filename>controller.php</filename>
+        <filename>router.php</filename>
+        <folder>views</folder>
+        <folder>models</folder>
+        <folder>controllers</folder>
+        <folder>helpers</folder>
+    </files>
+    <media destination="com_intra" folder="media">
+        <folder>js</folder>
+        <folder>css</folder>
+    </media>
+    <languages folder="languages/site">
+        
+			<language tag="da-DK">da-DK/da-DK.com_intra.ini</language>
+			<language tag="en-GB">en-GB/en-GB.com_intra.ini</language>
+    </languages>
+    <administration>
+        <menu img="media/com_intra/images/s_com_intra.png" >COM_INTRA</menu>
+        <submenu>
+            
+			<menu link="option=com_intra&amp;view=departmentss" view="departmentss" img="media/com_intra/images/s_departmentss.png" alt="Intra/Departmentss">COM_INTRA_TITLE_DEPARTMENTSS</menu>
+
+			<menu link="option=com_intra&amp;view=groups" view="groups" img="media/com_intra/images/s_groups.png" alt="Intra/Groups">COM_INTRA_TITLE_GROUPS</menu>
+
+			<menu link="option=com_intra&amp;view=polls" view="polls" img="media/com_intra/images/s_polls.png" alt="Intra/Polls">COM_INTRA_TITLE_POLLS</menu>
+
+			<menu link="option=com_intra&amp;view=pollanswers" view="pollanswers" img="media/com_intra/images/s_pollanswers.png" alt="Intra/Pollanswers">COM_INTRA_TITLE_POLLANSWERS</menu>
+
+        </submenu>
+        <files folder="administrator">
+            <filename>access.xml</filename>
+            <filename>config.xml</filename>
+            <filename>controller.php</filename>
+            <filename>index.html</filename>
+            <filename>intra.php</filename>
+            <folder>controllers</folder>
+            <folder>assets</folder>
+            <folder>helpers</folder>
+            <folder>models</folder>
+            <folder>sql</folder>
+            <folder>tables</folder>
+            <folder>views</folder>
+        </files>
+        <languages folder="languages/administrator">
+            
+			<language tag="da-DK">da-DK/da-DK.com_intra.ini</language>
+			<language tag="da-DK">da-DK/da-DK.com_intra.sys.ini</language>
+			<language tag="en-GB">en-GB/en-GB.com_intra.ini</language>
+			<language tag="en-GB">en-GB/en-GB.com_intra.sys.ini</language>
+        </languages>
+    </administration>
+    <config>
+        <fields name="params">
+            <fieldset name="component">
+                <field name="save_history" default="0" />
+            </fieldset>
+        </fields>
+    </config>
+    <plugins>
+        <plugin group="search" plugin="intra"/>
+    </plugins>
+    
+</extension>
+<!-- Component built by the Joomla Component Creator -->
+<!-- http://www.component-creator.com/ -->

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fields name="filter">
+        <field name="search" type="text" hint="COM_INTRA_SEARCH_FILTER_SUBMIT"
+               label="COM_USERS_FILTER_SEARCH_DESC"
+               class="js-stools-search-string" />
+
+        <field name="department" type="sql" label="COM_INTRA_FORM_LBL_POLL_DEPARTMENT" query="SELECT '' AS `id`, 'COM_INTRA_POLLS_DEPARTMENT_FILTER' AS `val` UNION SELECT `id`, `name` AS val FROM `#__intra_departments`" key_field="id" value_field="val" class="inputbox" onchange="this.form.submit()" translate="true"/>
+
+
+    </fields>
+</form>

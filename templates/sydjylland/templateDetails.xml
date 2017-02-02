@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/2.5/template-install.dtd">
+
+<extension version="3.0" type="template" method="upgrade">
+	
+	<name>Sydjylland 2016</name>
+	<creationDate>24-10-2012</creationDate>
+	<author>Lars Mogensen</author>
+	<copyright>Copyright © 2016</copyright>
+	<authorEmail>larsmog@gmail.com</authorEmail>
+	<authorUrl>http://www.enhedslisten.dk</authorUrl>
+	<version>2.1</version>
+	<description>Sydjylland Tempalete 2016</description>
+	
+	<files>
+		<folder>css</folder>
+		<folder>html</folder>
+		<folder>fonts</folder>
+		<folder>images</folder>
+		<folder>language</folder>
+		<folder>js</folder>
+		<filename>apple-touch-icon-57x57.png</filename>
+		<filename>apple-touch-icon-72x72.png</filename>
+		<filename>apple-touch-icon-114x114.png</filename>
+		<filename>component.php</filename>
+		<filename>error.php</filename>
+		<filename>favicon.ico</filename>
+		<filename>index.php</filename>
+		<filename>offline.php</filename>
+		<filename>template_preview.png</filename>
+		<filename>template_thumbnail.png</filename>
+		<filename>templateDetails.xml</filename>
+	</files>
+	
+	
+	
+	<positions>
+		<position>left</position>
+		<position>right</position>
+		<position>debug</position>
+	</positions>
+	
+	<config>
+		<fields name="params">
+			<fieldset name="BOOTSTRAP">
+				<field name="bootstrapcss" class="btn-group" type="radio" default="0" label="Bootstrap CSS" description="Aktivér Boostrap CSS">
+  					<option value="0">JNO</option>
+  					<option value="1">JYES</option>
+  				</field>
+  				<field name="bootstrapjs" class="btn-group" type="radio" default="0" label="Bootstrap JS" description="Aktivér Boostrap JS + jQuery">
+  					<option value="0">JNO</option>
+  					<option value="1">JYES</option>
+  				</field>
+			</fieldset>
+			<fieldset name="COMPATIBILITY">
+  			  <field name="modernizr" class="btn-group" type="radio" default="0" label="Modernizr" description="Aktivér Modernizer">
+  					<option value="0">JNO</option>
+  					<option value="1">JYES</option>
+  				</field>
+			</fieldset>
+  			<fieldset name="FONTAWESOME">
+  				<field name="fontawesome" class="btn-group" type="radio" default="0" label="Fontawesome" description="Aktivér Fontawesome">
+  					<option value="0">JNO</option>
+  					<option value="1">JYES</option>
+  				</field>
+  			</fieldset>
+  			<fieldset name="OTHER">
+  				  <field name="ga" type="text" label="Google Analytics" description="Indsæt trackingkode (UA-XXXXXX-X)"></field>
+  			</fieldset>
+		</fields>
+	</config>	
+</extension>
